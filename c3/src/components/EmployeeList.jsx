@@ -1,10 +1,9 @@
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios'
 import { Link } from "react-router-dom";
 
 export const EmployeeList = () => {
     const [emp,setEmp] = useState([]);
-    const empContext = createContext();
 
     useEffect(()=>{
         axios.get('http://localhost:8080/employee')
